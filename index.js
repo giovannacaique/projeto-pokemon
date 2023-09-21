@@ -15,6 +15,10 @@ function acao() {
             console.log(response)
             console.log(response.sprites.front_default)
             document.getElementById('imagem').src = response.sprites.front_default
+
+            for (const hab of response.abilities) {
+                console.log(hab.ability.name)
+            }
         })
 }
 
