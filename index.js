@@ -5,11 +5,15 @@ function acao() {
 }
 
 function acao() {
-    fetch('https://pokeapi.co/api/v2/pokemon/21')
+
+    let pokemon = document.getElementById('pokemon').value
+
+    fetch('https://pokeapi.co/api/v2/pokemon/' + pokemon)
         .then(function (response) {
             return response.json()
         }).then(function (response) {
             console.log(response)
+            console.log(response.sprites.front_default)
         })
 }
 
