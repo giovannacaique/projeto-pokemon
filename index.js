@@ -14,6 +14,7 @@ function acao() {
         }).then(function (response) {
             console.log(response)
             console.log(response.sprites.front_default)
+            document.getElementById('imagem').src = response.sprites.front_default
         })
 }
 
