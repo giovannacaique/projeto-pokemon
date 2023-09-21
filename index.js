@@ -16,9 +16,13 @@ function acao() {
             console.log(response.sprites.front_default)
             document.getElementById('imagem').src = response.sprites.front_default
 
+            let html_lista = ''
             for (const hab of response.abilities) {
                 console.log(hab.ability.name)
+                html_lista += '<li class="list-group-item>'+hab.ability.name+'</li>'
             }
+            console.log(html_lista)
+            document.getElementById('habilidades').innerHTML = html_lista
         })
 }
 
